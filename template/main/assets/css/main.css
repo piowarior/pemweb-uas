@@ -153,6 +153,11 @@ h6 {
   z-index: 997;
 }
 
+.list-tujuan{
+  list-style: none;
+  text-align: center;
+}
+
 .header .logo {
   line-height: 1;
 }
