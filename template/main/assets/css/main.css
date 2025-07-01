@@ -97,7 +97,7 @@ h6 {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
-}
+} 
 
 .php-email-form .sent-message {
   display: none;
@@ -180,6 +180,13 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1199px) {
+  .header .logo img {
+  display: none;
+}
+  
+}
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
@@ -195,7 +202,21 @@ h6 {
     padding: 0;
   }
 
-  .navmenu ul {
+  .navmenu .login-btn{
+    background-color: var(--accent-color);
+    border-radius: 9px;
+  }
+
+  .navmenu .login-btn:hover{
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    border-radius: 9px;
+  }
+
+  .login-mobile-btn {
+    display: none;
+  }
+
+  .navmenu .desktop {
     margin: 0;
     padding: 0;
     display: flex;
@@ -296,6 +317,18 @@ h6 {
     left: -100%;
     visibility: visible;
   }
+  .navmenu .btn-daftar-nav{
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  border: none;
+  padding: 8px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  animation: fadeInUp 1s both 0.4s;
+  }
+  
 }
 
 /* Navmenu - Mobile */
@@ -313,6 +346,74 @@ h6 {
     padding: 0;
     z-index: 9997;
   }
+
+/* virya nambahin ini, biar ada tombol login pas ukuran layarnya ngecil */
+  .navmenu .login-btn {
+    display: none;
+  }
+
+  .login-mobile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--default-font);
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+  .login-mobile-btn .login-btn-mobile {
+  font-size: 16px;
+  color: var(--default-color);
+  background-color: var(--accent-color);
+  font-family: var(--default-font);
+  text-decoration: none;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  transition: 0.3s;
+}
+
+  .login-mobile-btn .sign-btn-mobile {
+  font-size: 16px;
+  color: var(--default-color);
+  background-color: transparent; 
+  font-family: var(--default-font);
+  text-decoration: none;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  transition: 0.3s;
+}
+
+  .login-mobile-btn .login-btn-mobile:hover {
+  font-size: 16px;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  font-family: var(--default-font);
+  text-decoration: none;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transition: 0.3s;
+}
+
+  .login-mobile-btn .sign-btn-mobile:hover {
+  font-size: 16px;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  font-family: var(--default-font);
+  text-decoration: none;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transition: 0.3s;
+}
+/* sampe sini */
 
   .navmenu ul {
     display: none;
